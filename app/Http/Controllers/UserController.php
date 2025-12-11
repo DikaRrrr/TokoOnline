@@ -106,7 +106,7 @@ class UserController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        // ddd($request);
+        dd($request);
         $user = User::findOrFail($id);
 
         $rules = [

@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\Models\User;
+use App\Models\Kategori;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -26,7 +27,7 @@ class DatabaseSeeder extends Seeder
             'role' => '1',
             'status' => 1,
             'hp' => '0812345678901',
-            'password' => bcrypt('P@55Pword'),
+            'password' => bcrypt('P@55word'),
         ]);
         #untuk record berikutnya silahkan, beri nilai berbeda pada nilai: nama, email, hp dengannilai masing-masing anggota kelompok
         User::create([
@@ -37,5 +38,15 @@ class DatabaseSeeder extends Seeder
             'hp' => '081234567892',
             'password' => bcrypt('P@55word'),
         ]);
+        Kategori::create([
+            'nama_kategori' => 'Brownies',]);
+        Kategori::create([
+            'nama_kategori' => 'Combro',]);
+        Kategori::create(
+            ['nama_kategori' => 'Dawet',]);
+        Kategori::create([
+            'nama_kategori' => 'Mochi',]);
+        Kategori::create([
+            'nama_kategori' => 'Wingko',]);
     }
 }

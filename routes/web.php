@@ -3,7 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\BerandaController;
+use App\Http\Controllers\KategoriController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,3 +30,7 @@ Route::post('backend/logout', [LoginController::class, 'logoutBackend'])->name('
 
 // Route::resource('backend/user', UserController::class)->middleware('auth');
 Route::resource('backend/user', UserController::class, ['as' => 'backend'])->middleware('auth');
+Route::resource('backend/kategori', KategoriController::class, ['as' => 'backend'])->middleware('auth');
+Route::resource('backend/produk', ProdukController::class, ['as' => 'backend'])->middleware('auth');
+Route::post('foto-produk/store', [ProdukController::class, 'storeFoto'])->name('backend.foto_produk.store')->middleware('auth');
+Route::delete('foto-produk/{id}', [ProdukController::class, 'destroyFoto'])->name('backend.foto_produk.destroy')->middleware('auth');
