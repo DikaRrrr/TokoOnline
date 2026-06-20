@@ -185,16 +185,22 @@ sidebartoggler waves-effect waves-light" href="javascript:void(0)"
                 <!-- Sidebar navigation-->
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav" class="p-t-30">
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect
-waves-dark sidebar-link"
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="{{ route('backend.beranda') }}" aria-expanded="false"><i
                                     class="mdi mdi-view-dashboard"></i><span class="hide-menu">Beranda</span></a>
                         </li>
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect
-waves-dark sidebar-link"
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="{{ route('backend.user.index') }}" aria-expanded="false"><i
                                     class="mdi mdi-account"></i><span class="hide-menu">User</span></a>
                         </li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                                href="{{ route('backend.customer.index') }}" aria-expanded="false"><i
+                                    class="mdi mdi-account-multiple"></i><span class="hide-menu">Customer</span></a>
+                        <li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                                href="{{ route('pesanan.proses') }}" aria-expanded="false"><i
+                                    class="mdi mdi-cart"></i><span class="hide-menu">Pesanan</span></a>
+                        <li>
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow waveseffect waves-dark"
                                 href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-shopping"></i><span
                                     class="hide-menu">Data Produk </span></a>
@@ -209,6 +215,19 @@ waves-dark sidebar-link"
                                             class="hide-menu"> Produk
                                         </span></a>
                                 </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark"
+                                href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-receipt"></i><span
+                                    class="hide-menu">Laporan </span></a>
+                            <ul aria-expanded="false" class="collapse first-level">
+                                <li class="sidebar-item"><a href="{{ route('backend.laporan.formuser') }}"
+                                        class="sidebar-link"><i class="mdi mdi-chevron-right"></i><span
+                                            class="hide-menu"> User </span></a></li>
+                                <li class="sidebar-item"><a href="{{ route('backend.laporan.formproduk') }}"
+                                        class="sidebar-link"><i class="mdi mdi-chevron-right"></i><span
+                                            class="hide-menu"> Produk
+                                        </span></a></li>
                             </ul>
                         </li>
                     </ul>

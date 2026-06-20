@@ -90,6 +90,7 @@
                                     @enderror
                                 </div>
                             </div>
+                            <span style="color: white"><b>password : P@55word </b></span>
                         </div>
                         <div class="row border-top border-secondary">
                             <div class="col-12">
